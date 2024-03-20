@@ -1,0 +1,62 @@
+/* styles for signin*/
+
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+h2 {
+    padding: 10px;
+}
+
+.back-arrow {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+.login-section {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.login-image {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.login-container {
+    text-align: center;
+    color: white;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.5); /*opacity*/
+    padding: 20px;
+}
+
+.login-container-input {
+    width: 300px;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.login-container-input input[type="email"],
+.login-container-input input[type="password"],
+.login-container-input input[type="submit"] {
+    margin-bottom: 20px; /* Add margin-bottom to create space between inputs */
+}
+
+.login-container a{
+    color: white;
+}

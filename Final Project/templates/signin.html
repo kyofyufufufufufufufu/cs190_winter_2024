@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="">
+        <meta name="keywords" content="ski,skiing,snowboard,snowboarding,skitrip,resort">
+        <meta name="author" content="Tabitha Geiger">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/stylessignin.css') }}">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+        <script src="{{ url_for('static', filename='signinapp.js') }}" defer></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <title>Arctic Travels</title>
+    </head>
+    <body>
+        <script src="{{ url_for('static', filename='signinapp.js') }}" defer></script>
+        <section class="login-section">       
+            <div class="overlay">
+                <div class="login-container">
+                    <h2>Sign in</h2>
+                    <p>Or create a new account (work in progress)</p>
+                    <div class="login-container-input rounded">
+                        <form id="loginForm" >
+                            <input type="email" id="email" placeholder="email" value="{{
+                                request.form.username }}" required>
+                            <input type="password" id="password" placeholder="********" value="{{
+                                request.form.password }}" required>
+                            <input type="submit" id="submit" class="rounded bubble-link" value="Submit">
+                        </form>
+                        {% if error %}
+                            <p class="error"><strong>Error:</strong> {{ error }}
+                        {% endif %}
+                        <a href="#signup" onclick="navigate('Signup')">Create an account</a>
+                        <img src="{{ url_for('static', filename='images/icons8-arrow-left-100.png') }}" alt="Back Arrow" class="back-arrow" id="backArrow">
+                    </div>
+                </div>
+            </div>
+            <img src="{{ url_for('static', filename='images/tim-vanderhoydonck-QV58wLRuV6I-unsplash.jpg') }}" alt="Winter landscape with a ski lift." 
+            class="login-image login-body">
+        </section>
+    </body>
+</html>
